@@ -1,0 +1,31 @@
+.t-Login-container{
+    background-image: url("#APP_FILES#51364.jpg");
+    background-repeat : no-repeat;
+    background-size :  cover;
+}
+
+.t-Login-logo {
+    background-image: url(""); 
+     background-size: cover;
+    
+    border-radius: 50%;
+    width: 150px;
+    height: 120px;
+}
+
+.t-Login-region .t-Login-body .t-Form-fieldContainer:not(.t-Form-fieldContainer--floatingLabel) .apex-item-text {
+    font-size: 16px;
+    padding: 4px 36px;
+    height: 40px;
+    border-radius: 20px;
+}  
+
+.a-Button--hot, .t-Button--hot:not(.t-Button--simple), body .ui-button.ui-button--hot, body .ui-state-default.ui-priority-primary {
+    background-color: #0c0b0b;
+    color: #f9f9f9;
+    border-radius: 15px;
+}
+
+.a-Button--hot:hover, .a-Button--hot:not(:active):focus, .t-Button--hot:not(.t-Button--simple):hover, .t-Button--hot:not(.t-Button--simple):not(:active):focus, body .ui-button.ui-button--hot:hover, body .ui-button.ui-button--hot:not(:active):focus, body .ui-state-default.ui-priority-primary:hover, body .ui-state-default.ui-priority-primary:not(:active):focus {
+   background-color: #363b40;
+} 
