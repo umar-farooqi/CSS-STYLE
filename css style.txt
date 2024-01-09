@@ -11,3 +11,5 @@ class="t-Button t-Button--simple t-Button--hot t-Button--stretch"
 ====
 style="background-color:#A9A799;"
 static id below (custome attribute)==
+
+<span style="font-size:15px;color:blue;font-weight:bold;">Seller Fard Area</span>
