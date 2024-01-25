@@ -26,6 +26,13 @@
     border-radius: 15px;
 }
 
+
+
+
+
+
+Please edit lov and don't show App_user name. time one hour
+
 .a-Button--hot:hover, .a-Button--hot:not(:active):focus, .t-Button--hot:not(.t-Button--simple):hover, .t-Button--hot:not(.t-Button--simple):not(:active):focus, body .ui-button.ui-button--hot:hover, body .ui-button.ui-button--hot:not(:active):focus, body .ui-state-default.ui-priority-primary:hover, body .ui-state-default.ui-priority-primary:not(:active):focus {
    background-color: #363b40;
 } 
