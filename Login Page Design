@@ -3,7 +3,7 @@
     background-repeat : no-repeat;
     background-size :  cover;
 }
-
+ 
 .t-Login-logo {
     background-image: url(""); 
      background-size: cover;
