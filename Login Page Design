@@ -1,6 +1,6 @@
 .t-Login-container{
     background-image: url("#APP_FILES#51364.jpg");
-    background-repeat : no-repeat; 
+    background-repeat : no-repeat;
     background-size :  cover;
 }
  
