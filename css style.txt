@@ -13,3 +13,6 @@ style="background-color:#A9A799;"
 static id below (custome attribute)==
 
 <span style="font-size:15px;color:blue;font-weight:bold;">Seller Fard Area</span>
+========
+linki attributes button color 
+class="t-Button t-Button--stretch u-color-23";
