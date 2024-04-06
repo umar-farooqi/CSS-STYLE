@@ -16,3 +16,5 @@ static id below (custome attribute)==
 ========
 linki attributes button color 
 class="t-Button t-Button--stretch u-color-23";
+===================================================
+<b>Alert Call</b> <span style="font-weight: bold; color: white; background-color: red; padding: 5px; border-radius: 15px;">&P272_COUNT.</span>
