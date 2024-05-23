@@ -1,0 +1,12 @@
+.a-CardView 
+{
+    background-color: #fed8914a;
+}
+body{
+background-image:url('#APP_IMAGES#Bulster.gif');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 90%;
+}  
+
+this query page level inline box enter
