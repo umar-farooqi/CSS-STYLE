@@ -10,3 +10,18 @@
 </body>
 </html>
 
+style="margin-top:30%;"
+==========================================================================
+back ground image code css inline 
+ .a-CardView 
+{
+    background-color: #fed8914a;
+}
+body{
+background-image:url('#APP_IMAGES#Faisal Movers Housing.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 50%;
+}
+
+
