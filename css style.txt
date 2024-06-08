@@ -27,3 +27,8 @@ link button
 ====================================
 CSS CLASES
 js-dialog-size1000x600
+
+====================
+ADVANCED
+CUSTOME ATTRIBUTE 
+style=";background-color:#96A5AF;"
