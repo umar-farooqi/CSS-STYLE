@@ -27,7 +27,6 @@ link button
 ====================================
 CSS CLASES
 js-dialog-size1000x600
-
 ====================
 ADVANCED
 CUSTOME ATTRIBUTE 
