@@ -19,7 +19,6 @@ class="t-Button t-Button--stretch u-color-23";
 ===================================================
 <b>Alert Call</b> <span style="font-weight: bold; color: white; background-color: red; padding: 5px; border-radius: 15px;">&P272_COUNT.</span>
 
-
 button style delete 
 <i class="fa fa-trash" aria-hidden="true"></i>
 link button 
