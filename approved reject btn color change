@@ -1,0 +1,11 @@
+ CASE WHEN DDI.ACTIVE = 'Y' 
+        THEN '<button><span class="fa fa-check-circle" aria-hidden="true"></span></button>' 
+        WHEN REJECTED = 'REJECTED' 
+        THEN '<button><span style="color:red" aria-hidden="true"  class="fa fa-times-circle"></span></button>' 
+        WHEN MARKETING_STATUS = 'MARKETING APPROVED' THEN 'APPROVE'
+        END APPROVAL,
+        CASE WHEN   DDI.ACTIVE = 'Y'
+        THEN '<button><span style="color:red" aria-hidden="true" class="fa fa-times-circle"></span></button>' 
+        WHEN REJECTED = 'REJECTED' THEN '<button><span class="fa fa-check-circle" aria-hidden="true"></span></button>' 
+        WHEN MARKETING_STATUS = 'MARKETING APPROVED' THEN  'REJECT'
+        END REJECTED,
