@@ -9,3 +9,4 @@
         WHEN REJECTED = 'REJECTED' THEN '<button><span class="fa fa-check-circle" aria-hidden="true"></span></button>' 
         WHEN MARKETING_STATUS = 'MARKETING APPROVED' THEN  'REJECT'
         END REJECTED,
+
