@@ -12,3 +12,17 @@ video {
   height: 100%;
   z-index: -500;
 }
+
+===========================================================
+CODE PUT THE INLINE OPTION
+.t-BadgeList.u-colors .t-BadgeList-value a {
+    /* COLOR: BLACK; */
+    color: black;
+}
+
+body{
+background-image:url('#APP_FILES#Welcome.gif');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+}
