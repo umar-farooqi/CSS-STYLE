@@ -12,7 +12,7 @@
     width: 150px;
     height: 120px;
 }
-
+ 
 .t-Login-region .t-Login-body .t-Form-fieldContainer:not(.t-Form-fieldContainer--floatingLabel) .apex-item-text {
     font-size: 16px;
     padding: 4px 36px;
