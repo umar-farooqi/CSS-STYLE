@@ -31,4 +31,4 @@ ADVANCED
 CUSTOME ATTRIBUTE 
 style=";background-color:#96A5AF;"
 ================
-http://110.39.163.138:8080/ords/f?p=4000:1500:32447330578067::::: 
+http://110.39.163.138:8080/ords/f?p=4000:1500:32447330578067:::::
