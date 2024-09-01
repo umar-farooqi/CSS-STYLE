@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #ddd;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .footer div {
+            margin: 0 15px;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer .social-icons a {
+            text-decoration: none;
+            color: #ddd;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .footer .social-icons a:last-child {
+            margin-right: 0;
+        }
+
+        .footer .social-icons i {
+            margin-right: 8px;
+        }
+
+        .footer .contact-info,
+        .footer .opening-hours {
+            line-height: 1.8;
+        }
+
+        .footer .opening-hours h4 {
+            margin: 0 0 10px 0;
+        }
+
+        .footer .logo img {
+            max-height: 50px;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .footer .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #bbb;
+        }
+
+    </style>
+</head>
+<body>
+
+<footer class="footer">
+    <div class="social-profiles circle">
+        <a title="Facebook" href="https://www.facebook.com/ocharbonhalal"><i class="fa fa-facebook"></i></a>
+		<a title="Instagram" href="https://www.instagram.com/ocharbonhalal/"><i class="fa fa-instagram"></i></a>
+		<a title="Email address" href="mailto:contact@ocharbonhalal.com"><i class="fa fa-envelope"></i></a>
+    
+				</div>
+    <div class="contact-info">
+        <h4>RENTAL</h4>
+        <p>405 Av. Sainte-Anne, Saint-Hyacinthe, QC<br>J2S 5G3, Canada<br>+1 450-768-3797<br><a href="mailto:contact@ocharbonhalal.com" style="color: #ddd;">contact@ocharbonhalal.com</a></p>
+    </div>
+    <div class="opening-hours">
+        <h4>OPENING HOURS</h4>
+        <p>Monday 4:00PM - 9:00PM<br>Tues - Wed 11:00AM - 9:00PM<br>Thu - Sat 9:00AM - 10:00PM<br>Sun 9:00AM - 9:00PM</p>
+    </div>
+    <div class="logo">
+        <img src="your-logo-url-here.png" alt="O'Charbon Logo">
+    </div>
+</footer>
+
+<div class="footer copyright">
+    <p>&copy; 2023 O'Charbon Halal</p>
+</div>
+
+<!-- FontAwesome for icons (optional) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</body>
+</html>
