@@ -1,5 +1,6 @@
 this code put the when page load
 
+1  
 $(document).ready(function() {
     // Select the Add Row button
     var addRowButton = $("button[data-action='selection-add-row']");
@@ -12,7 +13,23 @@ $(document).ready(function() {
         lastGroup.append(addRowButton);
     }
 });
+---------------------------------------
+2 THIS CODE ADD ICON IN THE BUTTON
+$(document).ready(function() {
+    // Select the Add Row button
+    var addRowButton = $("button[data-action='selection-add-row']");
 
+    // Check if the button exists
+    if (addRowButton.length) {
+        // Add an icon before the button text
+        addRowButton.prepend('<i class="fas fa-plus"></i> ');
+
+        // Move the Add Row button to the right
+        var toolbar = addRowButton.closest(".a-Toolbar");
+        var lastGroup = toolbar.find(".a-Toolbar-group").last();
+        lastGroup.append(addRowButton);
+    }
+});
 
 ===========================================================
 this code button color change and button shift the right side
