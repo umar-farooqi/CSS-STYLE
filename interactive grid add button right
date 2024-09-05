@@ -12,3 +12,40 @@ $(document).ready(function() {
         lastGroup.append(addRowButton);
     }
 });
+
+
+===========================================================
+this code button color change and button shift the right side
+and code enter the inline option
+
+/* Ensure the toolbar is positioned relatively for absolute positioning */
+.a-Toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Target the "Add Row" button and apply the styles */
+button[data-action='selection-add-row'] {
+    background-color: green; /* Set the background color to green */
+    color: white; /* Set the text color to white for contrast */
+    border: none; /* Remove the default border */
+    padding: 5px 10px; /* Adjust padding for better appearance */
+    border-radius: 4px; /* Optional: rounded corners */
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+}
+
+/* Style the icon */
+button[data-action='selection-add-row'] .fas {
+    margin-right: 5px; /* Space between the icon and text */
+}
+
+/* Additional styling for toolbar groups */
+.a-Toolbar-group {
+    display: flex;
+}
+
+/* Move the last group to the right */
+.a-Toolbar-group:last-child {
+    margin-left: auto;
+}
