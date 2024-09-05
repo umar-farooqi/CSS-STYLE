@@ -1,0 +1,12 @@
+interactive grid edit button remove this code put tha 'when page load 
+
+$(document).ready(function() {
+    // Hide the Edit button using its unique ID
+    $("#TPD_ig_toolbar_m1").hide();        -- this code (#TPD_ig_toolbar_m1) interactive grid static id and button css id merge 
+});
+
+
+
+
+
+
