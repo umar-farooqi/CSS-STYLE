@@ -33,6 +33,7 @@ $(document).ready(function() {
 
 ===========================================================
 this code button color change and button shift the right side
+1  code 
 and code enter the inline option
 
 /* Ensure the toolbar is positioned relatively for absolute positioning */
@@ -65,4 +66,44 @@ button[data-action='selection-add-row'] .fas {
 /* Move the last group to the right */
 .a-Toolbar-group:last-child {
     margin-left: auto;
-}
+}   
+==============
+2 code 
+
+ Corresponding CSS to style the button and toolbar 
+<style>
+    /* Ensure the toolbar is positioned relatively for absolute positioning */
+    .a-Toolbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Target the "Add Row" button and apply the styles */
+    button[data-action='selection-add-row'] {
+        background-color: green; /* Set the background color to green */
+        color: white; /* Set the text color to white for contrast */
+        border: none; /* Remove the default border */
+        padding: 5px 10px; /* Adjust padding for better appearance */
+        border-radius: 4px; /* Optional: rounded corners */
+        display: flex;
+        align-items: center; /* Align icon and text vertically */
+    }
+
+    /* Style the icon */
+    button[data-action='selection-add-row'] .fas {
+        margin-right: 5px; /* Space between the icon and text */
+    }
+
+    /* Additional styling for toolbar groups */
+    .a-Toolbar-group {
+        display: flex;
+    }
+
+    /* Move the last group to the right */
+    .a-Toolbar-group:last-child {
+        margin-left: auto;
+    }
+</style>
+
+ //Optionally, ensure Font Awesome is included 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
