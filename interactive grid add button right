@@ -1,3 +1,4 @@
+this code put the when page load
 
 $(document).ready(function() {
     // Select the Add Row button
