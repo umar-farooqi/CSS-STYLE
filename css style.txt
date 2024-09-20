@@ -31,4 +31,17 @@ ADVANCED
 CUSTOME ATTRIBUTE 
 style=";background-color:#96A5AF;"
 ================
-http://110.39.163.138:8080/ords/f?p=4000:1500:32447330578067:::::
+
+button colour change 
+
+enter the query page level and enline box 
+
+.t-Button.t-Button--simple.t-Button--hot.t-Button--stretch {
+    background-color: #f9dbfd; /* Background color */
+    color: #936663; /* Slightly darker text color */
+    border: none; /* Remove border if desired */
+    font-weight: normal;
+}
+
+
+button class ==  class="t-Button t-Button--simple t-Button--hot t-Button--stretch"
