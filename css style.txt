@@ -2,7 +2,7 @@
 
 style="border:none;"
   
-button shap in report column  
+button shap in report column
 
 class="t-Button t-Button--simple t-Button--hot t-Button--stretch"
 class="t-Button t-Button--simple t-Button--hot t-Button--stretch"
