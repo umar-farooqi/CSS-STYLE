@@ -3,3 +3,23 @@ header text
    Facility Detail
 </h3>
 <hr class="gradient-line-green">
+
+
+page level css add in inline
+ .heading-green {
+        color: Green;
+        text-align: center;
+        margin: 0;
+        padding: 1px 0;
+    }
+
+    .gradient-line-green {
+        display: block;
+        border: 0;
+        height: 2px; 
+        border-radius: 3px; 
+        background: linear-gradient(to right, #a4d3a2, #2a8d4b, #a4d3a2); 
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+        margin: 10px auto; 
+        max-width: 100%; 
+    }
