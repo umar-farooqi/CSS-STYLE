@@ -1,59 +1,12 @@
 
-#pswd {
-    border-collapse: collapse;
-    width: 100%;
-}
-#pswd th {
-    background-color: #3ba14f;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #dddd;
-    font-weight: bold;
-}
-#pswd td {
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 4px;
-    border: 1px solid #dddd;
-    text-align: left;
-}
-#pswd td:hover {
-    background-color: #f1f1f1;
-    cursor: pointer;
-}
-#pswd .apexir_working {
-    background-color: #e0f7fa;
-}
-#pswd .apex-item-text {
-    border: 1px solid #4CAF50;
-    padding: 4px;
-}
-#pswd th {
-   width: 100px;
-}
-
-#pswd td {
-    width: 30px;
-    height: 40px;
-}
-#pswd td, #pswd th {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 768px) {
-    #SO th, #SO td {
-        width: 120px;
-        padding: 8px;
-    }
-}
 .heading-green {
         color: Green;
         text-align: center;
         margin: 0;
         padding: 1px 0;
 }
-
-.gradient-line-green {
+--- ye line ke liye ha jis me hr tag use kia jta ha
+.gradient-line-green {    
         display: block;
         border: 0;
         height: 2px; 
