@@ -63,3 +63,10 @@
         margin: 10px auto; 
         max-width: 100%; 
     }
+
+--------------------------
+ye region ke header text me lagna ha 
+<h3 class="heading-green">
+   Debit Note Details
+</h3>
+<hr class="gradient-line-green">
