@@ -23,3 +23,44 @@ ye region ke header text me lagna ha
    Debit Note Details
 </h3>
 <hr class="gradient-line-green">
+-----------------------------------------------------------------------------------
+
+page itme design 
+.large-input input,
+.large-input textarea,
+.large-input select {
+    min-height: 20px !important;
+}
+.large-input button {
+    height: 50px;
+    background: linear-gradient(135deg, #3ba14f, #3ba14f);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    animation: pulse 2s infinite;
+}
+.large-input button:hover {
+    background: linear-gradient(135deg, #2e8b47, #2e8b47);
+    box-shadow: 0 6px 14px rgba(0, 73, 153, 0.3);
+    transform: translateY(-4px);
+    animation: bounce 0.5s ease-in-out;
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+css class large-input
