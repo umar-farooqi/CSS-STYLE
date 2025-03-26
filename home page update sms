@@ -52,3 +52,17 @@
     <button class="close-btn" onclick="this.parentElement.style.display='none'">✖</button>
     ⚠️ We are updating the navigation menu to make it more concise and user-friendly.
 </div>
+
+home page background pic
+.t-BadgeList.u-colors .t-BadgeList-value a {
+    /* COLOR: BLACK; */
+    color: black;
+}
+
+body{
+background-image:url('#APP_FILES#Welcome.gif');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 100%;
+}
+
