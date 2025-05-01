@@ -1,0 +1,13 @@
+THIS CODE PUT IN THE GLOBAL PAGE
+
+<!-- Include your CSS file -->
+<link rel="stylesheet" href="#APP_FILES#LOADING.CSS">
+<!-- Include your JavaScript file -->
+<script src="#APP_FILES#LOADINGJS.JS"></script>
+
+<div id="loadingOverlay" class="loading-overlay">
+  <div class="loading-content">
+    <img src="#APP_FILES#Plant.gif" alt="Loading" class="loading-icon">
+    <p class="loading-text">Please Wait</p>
+  </div>
+</div>
