@@ -1,0 +1,10 @@
+    SELECT  
+        '<video autoplay muted loop playsinline style="max-width: 80%; height: auto; margin: 1px; background-color: transparent;">
+            <source src="http://110.39.163.139:8080/i/AKB/' || DOC_ID || '" type="video/mp4">
+            Your browser does not support the video tag.
+         </video>' AS VIDEO
+    FROM 
+        AB_DOCUMENT_RECORDS
+    WHERE
+        DOC_TYPE = 'VIDEO'
+        AND DOC_ID = 510
