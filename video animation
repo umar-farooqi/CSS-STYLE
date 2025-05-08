@@ -7,4 +7,4 @@
         AB_DOCUMENT_RECORDS
     WHERE
         DOC_TYPE = 'VIDEO'
-        AND DOC_ID = 510
+        AND DOC_ID = 510 
