@@ -1,5 +1,5 @@
 .large-input input,
-.large-input textarea, 
+.large-input textarea,
 .large-input select {
     min-height: 20px !important;
 }
