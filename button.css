@@ -1,0 +1,19 @@
+.t-Button.t-Button--secondary.t-Button--hot.t-Button--stretch {
+    background: linear-gradient(35deg, #B88746, #FDF5A6);
+    color: #191919;
+    border: none;
+    font-weight: normal;
+}
+
+.t-Button.t-Button--secondary.t-Button--hot.t-Button--stretch::after {
+    content: "📷";
+    margin-left: 5px;
+   font-size: 1.5em;
+    animation: blinkEffect 2s infinite;
+} 
+
+@keyframes blinkEffect {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
