@@ -2,7 +2,7 @@
 .large-input textarea, 
 .large-input select {
     min-height: 20px !important;
-}
+}      
 .large-input button {
     height: 50px;
     background: linear-gradient(135deg, #3ba14f, #3ba14f);
