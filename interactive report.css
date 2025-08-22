@@ -1,0 +1,49 @@
+
+/* Style for Interactive Report column headers (labels) */
+#SR th {
+    background-color: #3ba14f ;   /* Green background for headers */
+ /*    color: white !important;  White text color for headers */
+    font-weight: bold;  /* Make label text bold */
+    padding: 12px;  /* Add padding around the header text */
+    text-align: left;  /* Left-align the header text */
+    border: 1px solid #ddd;  /* Border around header cells */
+    white-space: nowrap; /* Prevent header text from wrapping */
+    overflow: hidden; /* Hide overflow if the text is too long */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+/* FOR THE ARROWS*/
+#SR th span {
+    color: white !important;  
+}
+/* TEXT COLOR */
+#SR th a {
+    color: white !important;  
+}
+
+/* Set a fixed width for the rest of the columns */
+#SR th:not(:first-child), #SR td:not(:first-child) {
+    width: 200px;  
+    word-wrap: break-word;  /* Break words when they overflow */
+    /*white-space: normal; Allow normal wrapping for table cells */
+}
+
+/* Hover effect for cells */
+#SR td:hover {
+    background-color: #11f08c;  /* Change background color on hover */
+    cursor: pointer;  /* Change cursor to pointer for better interactivity */
+}
+
+/* Optional: Add subtle shadow to header and data cells */
+#SR td, #SR th {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Add shadow around cells */
+}
+
+/* Responsive Design: Adjust column appearance for smaller screens */
+@media (max-width: 768px) {
+    #ITM td, #ITM th {
+        width: 120px;  /* Reduce column width on smaller screens */
+        padding: 8px;  /* Reduce padding for better space usage */
+    }
+}
+
+
