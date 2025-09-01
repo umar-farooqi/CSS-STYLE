@@ -1,4 +1,100 @@
---Report header style 
+--Report header style Qutation Report 
+
+
+/*-------------------------Grid CSS Code for POD and TPO------------------------------*/
+#PODS, #TPO {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0); 
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+}
+#PODS th, #TPO th {
+    background: linear-gradient(145deg, #4CAF50, #2e7d32);
+    color: #fff;
+    padding: 16px 25px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #388e3c;
+    font-size: 14px;
+    border-radius: 10px 10px 0 0;
+    transition: none;
+    box-shadow: none;
+}
+#PODS td, #TPO td {
+    background-color: rgba(249, 249, 249, 0.8); 
+    color: #333;
+    padding:  16px 12px;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 2px solid #ddd;
+    border-radius: 8px;
+    transition: none; 
+    box-shadow: none; 
+}
+#PODS td:hover, #TPO td:hover {
+    background-color: rgba(249, 249, 249, 0.8);
+    transform: none;
+    opacity: 1;
+    box-shadow: none; 
+    cursor: default;
+}
+#POD tr:nth-child(even) td, #TPO tr:nth-child(even) td {
+    background-color: rgba(241, 241, 241, 0.8); 
+}
+#PODS tr.active td, #TPO tr.active td {
+    background-color: rgba(165, 214, 167, 0.8);
+    color: #1b5e20;
+}
+#PODS .apex-item-text, #TPO .apex-item-text {
+    border: 2px solid #66bb6a;
+    padding: 14px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.1), inset -3px -3px 8px rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+#PODS td.active, #TPO td.active {
+    background-color: #dcedc8;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.1), inset -3px -3px 8px rgba(255, 255, 255, 0.7);
+}
+#PODS tr:hover, #TPO tr:hover {
+    background-color: rgba(200, 230, 201, 0.8);
+    transform: none; 
+    opacity: 1;
+    transition: none; 
+}
+@media (max-width: 768px) {
+    #POD th, #POD td,
+    #TPO th, #TPO td {
+        padding: 12px;
+        font-size: 14px;
+    }
+    #POD .apex-item-text, #TPO .apex-item-text {
+        padding: 10px;
+        font-size: 12px;
+    }
+    #POD th, #TPO th {
+        font-size: 15px;
+    }
+}
+#PODS td, #POD th, #TPO td, #TPO th {
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.05), inset -3px -3px 10px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    text-transform: capitalize; 
+}
+
+
+--------------------------------------------------------------Report header style  normal
 
 
 /* Style for Interactive Report column headers (labels) */
