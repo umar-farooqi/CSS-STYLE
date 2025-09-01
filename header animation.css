@@ -40,3 +40,27 @@
   <h3>📦 Purchase Order GRN Detail (Testing Purposes)</h3>
 </div>
 <hr class="gradient-line-green1">
+
+
+-------------------------------------------------------------------------------------
+ <h3 class="heading-green1">
+  Employee Registration
+</h3>
+<hr class="gradient-line-green1">
+
+<style>
+.heading-green1 {
+  color: green;          
+  text-align: center;    
+  font-weight: bold;     
+}
+
+.gradient-line-green1 {
+  border: none;
+  height: 3px;
+  width: 50%;            
+  margin: 0 auto;        
+  background: linear-gradient(to right, green, lightgreen, green);
+  border-radius: 5px;
+}
+</style>
