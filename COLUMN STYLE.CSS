@@ -1,0 +1,8 @@
+                INVOICE_STATUS = 'PURCHASE INVOICE' 
+                THEN '<span style="background-color: #FFF3CD; color: #856404; padding: 5px 15px; border-radius: 5px; border: 1px solid #FFEEBA; margin: 5px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); display: inline-block;"> 
+                PURCHASE INVOICE <span class="static-icon">✏️</span></span>' 
+                WHEN INVOICE_STATUS = 'REQ FOR RETURN'
+                THEN '<span style="background-color: #D1ECF1; color: #0C5460; padding: 5px 15px; border-radius: 5px; border: 1px solid #BEE5EB; margin: 5px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); display: inline-block;"> REQ FOR RETURN <span class="spin-icon">⏳</span></span>' 
+                WHEN INVOICE_STATUS = 'PURCHASE RETURN'
+                 THEN '<span style="background-color: #97BC62FF; color: #2C5F2D; padding: 5px 15px; border-radius: 5px; border: 1px solid #BEE5EB; margin: 5px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); display: inline-block;"> PURCHASE RETURN <span class="bounce-icon">✔</span></span>'
+               ELSE NULL END AS INVOICE_STATUS,
