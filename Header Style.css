@@ -172,7 +172,7 @@ ye region ke header text me lagna ha
 <hr class="gradient-line-green">
 -----------------------------------------------------------------------------------
 
-------------------------------------item style
+------------------------------------item style   put in the ---> Appearance   ---->CSS Classes  --->   large-input 
 .large-input input,
 .large-input textarea,
 .large-input select {
