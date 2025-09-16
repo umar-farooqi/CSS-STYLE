@@ -1,0 +1,18 @@
+ -- Aggregated fields
+        LISTAGG(ITEM_NAME, '<br>') WITHIN GROUP (ORDER BY ITEM_NAME) AS ITEM_NAMES_BR,
+        LISTAGG(SHIPMENT_WAREHOUSE, '<br>') WITHIN GROUP (ORDER BY SHIPMENT_WAREHOUSE) AS WAREHOUSES_BR,
+        LISTAGG(SHIPMENT_BAGS, '<br>') WITHIN GROUP (ORDER BY ITEM_NAME) AS SH_BAGS_BR,
+        SUM(SHIPMENT_BAGS) AS SHIPMENT_BAGS,
+        SUM(SHIPMENT_AMOUNT) AS SHIPMENT_AMOUNT,
+
+        '<ul style="color:green;"><li>' ||
+          LISTAGG(ITEM_NAME, '</li><li>') WITHIN GROUP (ORDER BY ITEM_NAME) ||
+        '</li></ul>' AS ITEM_NAMES_HTML,
+
+        '<ul style="color:red;"><li>' ||
+          LISTAGG(SHIPMENT_WAREHOUSE, '</li><li>') WITHIN GROUP (ORDER BY SHIPMENT_WAREHOUSE) ||
+        '</li></ul>' AS WAREHOUSES_HTML,
+
+        '<ul style="color:blue;"><li>' ||
+          LISTAGG(SHIPMENT_BAGS, '</li><li>') WITHIN GROUP (ORDER BY ITEM_NAME) ||
+        '</li></ul>' AS SH_BAGS_HTML
