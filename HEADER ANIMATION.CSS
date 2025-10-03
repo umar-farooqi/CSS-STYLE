@@ -1,0 +1,67 @@
+<style>
+.heading-wrapper {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  background: #ececec; /* soft greenish background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.heading-wrapper h3 {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #2ecc71, #27ae60, #1abc9c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: bounceText 5s infinite alternate ease-in-out;
+  text-shadow: 0px 0px 8px rgba(46, 204, 113, 0.5);
+}
+
+/* Animation for smooth forward & backward */
+@keyframes bounceText {
+  0% { transform: translateX(-20%); }
+  100% { transform: translateX(20%); }
+}
+
+.gradient-line-green1 {
+  height: 4px;
+  border: none;
+  background: linear-gradient(to right, #ececec, #ececec, #ececec);
+  margin-top: -10px;
+  border-radius: 2px;
+}
+</style>
+
+<div class="heading-wrapper">
+  <h3>📦 Employee Registration</h3>
+</div>
+<hr class="gradient-line-green1">
+
+
+
+
+<!-- <h3 class="heading-green1">
+  Employee Registration
+</h3>
+<hr class="gradient-line-green1">
+
+<style>
+.heading-green1 {
+  color: green;          
+  text-align: center;    
+  font-weight: bold;     
+}
+
+.gradient-line-green1 {
+  border: none;
+  height: 3px;
+  width: 50%;            
+  margin: 0 auto;        
+  background: linear-gradient(to right, green, lightgreen, green);
+  border-radius: 5px;
+}
+</style> -->
