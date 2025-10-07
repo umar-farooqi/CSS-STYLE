@@ -1,0 +1,27 @@
+td[headers="C49654339595153717"] .t-Button.t-Button--simple.t-Button--hot.t-Button--stretch {
+    background: linear-gradient(35deg, #B88746, #FDF5A6);
+    color: #191919; /* Slightly darker text color */
+    border: none; /* Remove border if desired */
+    font-weight: normal;
+} 
+
+td[headers="C50532039746875817"] .t-Button.t-Button--simple.t-Button--hot.t-Button--stretch {
+    background: linear-gradient(35deg, #B88746, #FDF5A6);
+    color: #191919; /* Slightly darker text color */
+    border: none; /* Remove border if desired */
+    font-weight: normal;
+}
+
+
+
+// INLINE CSS 
+       CASE 
+            WHEN APP.APP_ID IS NULL THEN 
+                '<span style="background-color: #f0acb2; color: #721C24; padding: 5px 15px; border-radius: 5px; border: 1px solid #C3E6CB; margin: 5px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); display: inline-block;">Pending <span class="blinking-icon">🚨</span></span>'
+            WHEN APP.APPROVAL_STATUS = 'APPROVED' THEN 
+                '<span style="background-color: #D4EDDA; color: #155724; padding: 5px 15px; border-radius: 5px; border: 1px solid #C3E6CB; margin: 5px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); display: inline-block;">Approved <span class="static-icon">✅</span></span>'
+            WHEN APP.APPROVAL_STATUS = 'REJECTED' THEN 
+                '<span style="background-color: #D1ECF1; color: #0C5460; padding: 5px 15px; border-radius: 5px; border: 1px solid #BEE5EB; margin: 5px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); display: inline-block;">Rejected <span class="spin-icon">❌</span></span>'
+            ELSE 
+                '<span style="background-color: #FFF3CD; color: #856404; padding: 5px 15px; border-radius: 5px; border: 1px solid #FFEEBA; margin: 5px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); display: inline-block;">Requested For Posting <span class="blinking-icon">🚨</span></span>'
+        END AS APPROVAL_STATUS,
