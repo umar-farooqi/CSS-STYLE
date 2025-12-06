@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Oracle Apex Our Team</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+
+  body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #38ef7d, #00c6ff, #3f5efb);
+    background-size:400% 400%;
+    animation: shinyBackground 8s ease infinite;
+  }
+  @keyframes shinyBackground{
+    0%{background-position:0% 50%}
+    25%{background-position:100% 50%}
+    50%{background-position:0% 50%}
+    75%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+
+  .team-container{
+    position:relative;
+    width:90vmin;
+    height:90vmin;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  /* fixed circle outline (stays straight) */
+  .circle-outline{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    border: 3px solid rgba(255,255,255,0.25);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15) inset;
+    z-index:2;
+    pointer-events:none;
+  }
+
+  /* center button stays on top */
+  .center-button{
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:70%;
+    background:#fff;
+    color:#1a73e8;
+    border:none;
+    font-size:1.1rem;
+    font-weight:700;
+    cursor:pointer;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    z-index:6;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:transform .25s ease;
+  }
+  .center-button:hover{ transform:scale(1.04) }
+
+  /* ORBIT rotates (this moves members around the center) */
+  .orbit{
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:3;
+    transform-origin:center center;
+    animation: rotateCircle 30s linear infinite;
+    pointer-events:none; /* allow clicks through to members */
+  }
+  @keyframes rotateCircle{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+  }
+
+#teamModal img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+
+
+  /* Team member box (positioned absolutely inside orbit) */
+  .team-member{
+    position:absolute;               /* left/top set by JS */
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.18);
+    z-index:4;
+    overflow:hidden;
+    /* counter-rotation cancels parent's orbit rotation so content stays upright */
+    animation: counterRotate 30s linear infinite;
+    transform-origin:center center;
+    pointer-events:auto; /* enable clicks */
+  }
+
+  @keyframes counterRotate{
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); } /* opposite to orbit */
+  }
+
+  /* inner wrapper used for hover scaling so we don't clash with rotation transform */
+  .member-inner{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition: transform .22s ease, box-shadow .22s ease;
+    padding:10px;
+  }
+  .team-member:hover .member-inner{
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  }
+
+  .team-member img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:8px;
+  }
+  .team-member .name{ font-weight:700; font-size:1rem; text-align:center }
+  .team-member .position{ font-size:.85rem; color:#555; text-align:center }
+
+  /* modals and other styles remain same - kept simple here */
+  .modal{ display:none; position:fixed; z-index:100; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,.7); }
+  .modal-content{ background:#fff; margin:6% auto; padding:24px; width:90%; max-width:520px; border-radius:10px }
+  .close{ float:right; font-size:26px; cursor:pointer; color:#666 }
+
+  @media (max-width:768px){
+    .team-container{ width:95vmin; height:95vmin }
+    .center-button{ width:150px; height:150px; font-size:1rem }
+    .team-member{ width:90px; height:90px }
+    .team-member img{ width:45px; height:45px }
+    .team-member .name{ font-size:.72rem }
+    .team-member .position{ font-size:.62rem }
+  }
+</style>
+</head>
+<body>
+  <div class="team-container">
+    <div class="circle-outline"></div>
+
+    <button class="center-button" id="hireButton">
+      <span class="icon">👨‍💻</span>
+      Fertilizer Trading Platform
+    </button>
+
+    <!-- orbit wrapper (this rotates) -->
+    <div class="orbit">
+      <!-- each member has inner wrapper for hover scale -->
+      <div class="team-member" data-name="Muhammad Umar Farooq" data-position="Developer"
+       data-bio="I am working at Akbar Brothers as an Oracle APEX Developer, and Alhamdulillah, I have over 2.5+ years of experience. I have worked on Master-Detail Forms, Interactive Grids, Cards, and BI Reports and Sub detail forms. I am ready to work on all kinds of Oracle APEX development projects. I also have a strong interest in Oracle &  Artificial Intelligence (AI).">
+                <div class="member-inner">
+          <img src="#APP_FILES#MUHAMMAD UMAR FAROOQ/WhatsApp Image 2025-09-15 at 5.04.32 PM.jpeg" alt="Naveed">
+          <div class="name">Umar Farooq</div>
+          <div class="position"><b>Asst Developer</b></div>
+        </div>
+      </div>
+
+      <div class="team-member" data-name="Talha" data-position="Developer"
+             data-bio="I am working at Akbar Brothers as an Oracle APEX Developer, and Alhamdulillah, I have over 1+ years of experience.I have a strong interest in designing with Oracle APEX. ">
+        <div class="member-inner">
+          <img src="#APP_FILES#Talha/Screenshot 2025-09-15 173254.png" alt="Talha">
+          <div class="name">Talha Amin</div>
+          <div class="position"><b>Developer</b></div>
+        </div>
+      </div>
+
+      <div class="team-member" data-name="Abdul Wasay Chughtai" data-position="Developer"
+       data-bio="I am working at Akbar Brothers as an Oracle APEX Developer, and Alhamdulillah, I have over 1.5 years of experience. i'm intersted in Bi Report and Html Reports.">
+        <div class="member-inner">
+          <img src="#APP_FILES#WASAY/WhatsApp Image 2025-09-15 at 7.45.15 PM.jpeg" alt="Wasay">
+          <div class="name">Abdul Wasay Chughtai</div>
+          <div class="position"><b>Developer</b></div>
+        </div>
+      </div>
+
+      <div class="team-member" data-name="Abdul Razzak" data-position="Developer"
+      data-bio="I am working at Akbar Brothers as an Oracle APEX Developer, and Alhamdulillah, I have over 1.5+ years of experience. I can also work on Power BI and have a strong interest in creating dashboards.">
+        <div class="member-inner">
+          <img src="#APP_FILES#razzak/Screenshot 2025-09-15 173013.png" alt="Razzak">
+          <div class="name">Abdul Razzaq</div>
+          <div class="position"><b>Developer</b></div>
+        </div>
+      </div>
+
+      <div class="team-member" data-name="Khurram Khan" data-position="Coordinator"
+      data-bio="I am working at Akbar Brothers as an Oracle APEX Coordination,I have been working in the coordination field for over 5 years and can discuss and negotiate with anyone for any type of workflow, regardless of their expertise in their field.">
+
+        <div class="member-inner">
+          <img src="#APP_FILES#khurram khan/Screenshot 2025-09-15 173600.png" alt="Khurram">
+          <div class="name">Khurram Khan</div>
+          <div class="position"><b>Coordinator</b></div>
+        </div>
+      </div>
+
+      <div class="team-member" data-name="Jahanzaib" data-position="Sr.Developer"
+      data-bio="I am working at Akbar Brothers as an Oracle APEX Developer, and Alhamdulillah, I have over 8+ years of experience. I am ready to work on all kinds of Oracle APEX development projects.">
+
+
+        <div class="member-inner">
+          <img src="#APP_FILES#Jahanzaib/Screenshot 2025-09-15 171900.png" alt="Jahanzaib">
+          <div class="name">Jahan Zaib Sadiq</div>
+          <div class="position"><b>Sr. Developer</b></div>
+        </div>
+      </div>
+
+      <div class="team-member" data-name="Anas Aslam" data-position="Jr.Developer"
+    data-bio="I am working at Akbar Brothers as an Oracle APEX Developer, and Alhamdulillah, I have over 1+ years of experience.I have a strong passion for all kinds of development in Oracle APEX. ">
+
+        <div class="member-inner">
+          <img src="#APP_FILES#anas/Screenshot 2025-09-15 173418.png" alt="Anas">
+          <div class="name">Anas Aslam</div>
+          <div class="position"><b>Developer</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal (kept same structure as your original) -->
+  <div id="teamModal" class="modal"><div class="modal-content"><span class="close">&times;</span>
+    <div class="modal-header"><img id="modalImage" src="" alt=""><div><h2 id="modalName"></h2><p id="modalPosition"></p></div></div>
+    <div class="modal-body"><p id="modalBio"></p></div>
+  </div></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const orbit = document.querySelector('.orbit');
+  const teamMembers = document.querySelectorAll('.orbit .team-member');
+
+  function positionMembers(){
+    const orbitRect = orbit.getBoundingClientRect();
+    const orbitW = orbitRect.width;
+    const orbitH = orbitRect.height;
+    const radius = Math.min(orbitW, orbitH) * 0.4; // change 0.4 -> 0.45/0.5 for bigger circle
+    const cx = orbitW / 2;
+    const cy = orbitH / 2;
+
+    teamMembers.forEach((member, index) => {
+      const angle = (index * (2 * Math.PI) / teamMembers.length);
+      const x = cx + radius * Math.cos(angle) - member.offsetWidth / 2;
+      const y = cy + radius * Math.sin(angle) - member.offsetHeight / 2;
+
+      member.style.left = `${x}px`;
+      member.style.top  = `${y}px`;
+      // no need to manually rotate member here because CSS counterRotate animation cancels orbit animation
+    });
+  }
+
+  positionMembers();
+  // re-position on resize
+  window.addEventListener('resize', positionMembers);
+
+  // modal demo: open on member click (uses data-name/data-position)
+  const teamModal = document.getElementById('teamModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalName = document.getElementById('modalName');
+  const modalPosition = document.getElementById('modalPosition');
+  const modalBio = document.getElementById('modalBio');
+
+  teamMembers.forEach(member=>{
+    member.addEventListener('click', function(e){
+      const img = this.querySelector('img').src;
+      const name = this.getAttribute('data-name') || this.querySelector('.name').textContent;
+      const pos = this.getAttribute('data-position') || this.querySelector('.position').textContent;
+       const bio = this.getAttribute('data-bio') || (name + " — brief bio goes here.");
+      modalImage.src = img;
+      modalName.textContent = name;
+      modalPosition.textContent = pos;
+       modalBio.textContent = bio;  
+      teamModal.style.display = 'block';
+    });
+  });
+
+ 
+
+
+  // close modal
+  document.querySelectorAll('.close').forEach(btn=>{
+    btn.addEventListener('click', ()=> teamModal.style.display='none');
+  });
+  window.addEventListener('click', (ev)=> { if(ev.target===teamModal) teamModal.style.display='none' });
+});
+</script>
+</body>
+</html>
