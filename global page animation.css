@@ -1,0 +1,144 @@
+<div class="marquee-container">
+  <div class="marquee-track">
+    <span class="marquee-text">
+      <span class="org-name">&P_ORG_NAME.</span>
+      <span class="horizontal-line"></span>
+      <span class="tagline">A&nbsp;PROJECT&nbsp;OF&nbsp;FAISAL&nbsp;MOVERS&nbsp;HOUSING</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </span>
+
+    <span class="marquee-text">
+      <span class="org-name">&P_ORG_NAME.</span>
+      <span class="horizontal-line"></span>
+      <span class="tagline">A&nbsp;PROJECT&nbsp;OF&nbsp;FAISAL&nbsp;MOVERS&nbsp;HOUSING</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+    </span>
+  </div>
+</div>
+
+<style>
+/* Outer container with padding */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 18px 0;
+  background: radial-gradient(circle at center, #fff6ec 0%, #ffe4cc 100%);
+  white-space: nowrap;
+}
+
+/* Scrolling track */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 18s linear infinite;
+}
+
+/* Text styling */
+.marquee-text {
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900; /* bold */
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+  background: linear-gradient(270deg, #A65300, #ffb366, #ff944d, #A65300);
+  background-size: 800% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 6s ease-in-out infinite;
+}
+
+/* Bold small horizontal line */
+.horizontal-line {
+  display: inline-block;
+  width: 22px;       /* Small size */
+  height: 3px;       /* Bold appearance */
+  background-color: #A65300;
+  margin: 0 18px;
+  border-radius: 2px;
+}
+
+/* Animations */
+@keyframes scrollLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 0 4px rgba(255, 255, 255, 0.4); }
+  50%      { text-shadow: 0 0 12px rgba(255, 255, 255, 0.9); }
+}
+</style>
+
+
+
+
+
+-----
+
+
+.t-BadgeList.u-colors .t-BadgeList-value a {
+     COLOR: BLACK;
+}
+
+body{
+    background-color: #ffe4c4;
+/*background-image:url('#APP_IMAGES#FMH_Desk/CFMH.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-size: 90%; */
+}
+
+
+
+#floating-plots-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #fff7f0, #ffebdb);
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.plot-tile {
+  position: absolute;
+  background: linear-gradient(145deg, #a65300, #ffb98b);
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(166, 83, 0, 0.3);
+  transform: rotateX(60deg) rotateZ(45deg) scale(1);
+  animation: floatTile 20s ease-in-out infinite;
+  animation-fill-mode: both;
+  filter: blur(0.3px);
+  opacity: 0.3; /* Start already visible */
+}
+
+@keyframes floatTile {
+  0% {
+    transform: translateY(110vh) rotateZ(0deg) scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(50vh) rotateZ(180deg) scale(1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-120vh) rotateZ(360deg) scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+
+/* Make content appear on top */
+.t-Body {
+  position: relative;
+  z-index: 1;
+}
+.t-Region, .t-Body-content, .t-Header, .t-Body {
+  background-color: transparent !important;
+}
+
+
