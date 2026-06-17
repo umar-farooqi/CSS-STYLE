@@ -1,0 +1,651 @@
+-- BREADCRUMB
+
+<div class="stock-header-pro">
+
+  <div class="header-left">
+      <div class="title-row">
+          <span class="header-icon">📊</span>
+          <span class="module-name">Stock Management</span>
+      </div>
+
+      <h3>Stock Aging Report</h3>
+  </div>
+
+  <div class="header-right">
+      <span class="status-badge report-animate">
+          📄 Report
+      </span>
+  </div>
+
+  <div class="bottom-accent"></div>
+
+</div>
+
+-----Inline
+.large-input input,
+.large-input textarea,
+.large-input select {
+    min-height: 20px !important;
+}
+
+/* Button Styling */
+.large-input button {
+    height: 50px;
+    background: linear-gradient(135deg, #2a7a42, #2a7a42);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    animation: pulse 2s infinite;
+}
+
+/* Hover Effect */
+.large-input button:hover {
+    background: linear-gradient(135deg, #2a7a42, #2a7a42);
+    box-shadow: 0 6px 14px rgba(0, 73, 153, 0.3);
+    transform: translateY(-4px);
+    animation: bounce 0.5s ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* Subtle Pulsing Effect */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+  .heading-green {
+        color: #2a7a42;
+        text-align: center;
+        margin: 0;
+        padding: 1px 0;
+    }
+
+    .gradient-line-green {
+        display: block;
+        border: 0;
+        height: 2px; 
+        border-radius: 3px; 
+        background: linear-gradient(to right, #a4d3a2, #2a7a42, #a4d3a2); 
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+        margin: 10px auto; 
+        max-width: 100%; 
+    }
+
+
+
+.t-Button.t-Button--simple.t-Button--hot.t-Button--stretch::after {
+    content: "🖨️"; /* Add printer icon */
+    margin-left: 5px; /* Space between the text and the icon */
+    font-size: 20px; /* Increase the icon size (adjust value as needed) */
+}
+
+.t-Button.t-Button--simple.t-Button--hot.t-Button--stretch {
+    background: linear-gradient(25deg, #06a526, #AEFFDE);
+    color: #4A171E; /* Slightly darker text color */
+    border: none; /* Remove border if desired */
+    font-weight: normal;
+}
+
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.blinking-icon {
+    animation: blink 1s step-start infinite;
+    font-size: 10px; /* Increase font size for the blinking bell icon */
+}
+
+
+.t-Button.t-Button--simple.t-Button--hot.t-Button--stretch {
+    background: linear-gradient(35deg, #B88746, #FDF5A6);
+    color: #191919;
+    border: none;
+    font-weight: normal;
+}
+.t-Button.t-Button--simple.t-Button--hot.t-Button--stretch::after {
+    content: "💼";
+    margin-left: 5px;
+   font-size: 1.5em;
+} 
+
+@keyframes blinkEffect {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+
+
+
+.disabled {
+    pointer-events: none; 
+    opacity: 0.5; 
+    cursor: not-allowed; 
+}
+
+
+.status-link {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    color: white; /* Default text color */
+}
+
+.used {
+    background-color: #D4EDDA; /* Light green for 'Used' */
+    border-color: #C3E6CB; /* Light green border */
+    color: #155724; /* Dark green text */
+}
+
+.t-Body-content {
+    background-color: #ececec;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+  .large-checkbox {
+    width: 20px;
+    height: 20px;
+     } 
+/*------------------------------------------------------*/
+/* ============================= */
+/* CUSTOM CHECKBOX – DECENT GREEN */
+/* ============================= */
+
+.styled-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #ffffff;
+    border: 3px solid #2a7a42; /* Decent green */
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    transition: all 0.2s ease-in-out;
+    margin: 2px;
+}
+
+.styled-checkbox:checked {
+    background-color: #2a7a42;
+    border-color: #2a7a42;
+}
+
+.styled-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* ============================= */
+/* TABLE DESIGN */
+/* ============================= */
+
+#AA, #AR, #AM {
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 6px;
+}
+
+/* ============================= */
+/* TABLE HEADER – DECENT PROFESSIONAL GREEN */
+/* ============================= */
+
+#AA th, #AR th, #AM th {
+    background: linear-gradient(135deg,#2a7a42,#3ca460); /* Decent professional green */
+    color: white !important;
+    font-weight: 600;
+    padding: 10px 14px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    text-align: left;
+    border: 1px solid #d0d0d0;
+    white-space: nowrap;
+}
+
+/* Header text links fix */
+#AA th span, #AA th a,
+#AR th span, #AR th a,
+#AM th span, #AM th a {
+    color: white !important;
+}
+
+/* ============================= */
+/* TABLE BODY */
+/* ============================= */
+
+#AA td, #AR td, #AM td {
+    font-size: 13px;
+    padding: 8px 12px;
+    border: 1px solid #e5e5e5;
+    text-align: left;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+/* Row Hover – soft green */
+/* #AA tr:hover td,
+#AR tr:hover td,
+#AM tr:hover td {
+    background-color: #d9f0e0; /* Soft mint green hover */
+} */
+
+/* Clicked Cell – slightly darker soft green */
+#AA td.clicked-cell,
+#AR td.clicked-cell,
+#AM td.clicked-cell {
+    background-color: #bfe6cb !important; 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+}
+
+/* ============================= */
+/* COLUMN WIDTH */
+#AA td:first-child,
+#AR td:first-child,
+#AM td:first-child {
+    width: 120px;
+}
+
+#AA th:not(:first-child),
+#AR th:not(:first-child),
+#AM th:not(:first-child),
+#AA td:not(:first-child),
+#AR td:not(:first-child),
+#AM td:not(:first-child) {
+    width: 200px;
+}
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    #AA, #AR, #AM {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #AA th, #AA td,
+    #AR th, #AR td,
+    #AM th, #AM td {
+        font-size: 12px;
+        text-align: center;
+        padding: 10px;
+    }
+
+}
+
+/*---------------------------------------*/
+/* Optionally also style the toolbar inner controls */
+#LU_toolbar_controls {
+  background-color: #ececec !important;
+}
+
+.a-IRR-toolbar {
+    background-color: #ececec;}
+
+
+.data-box {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.bg-rate   { background-color: #e0f7fa; color: #006064; width: 120px;}
+.bg-net    { background-color: #F0E1B9FF; color: #A13941FF; width: 120px; }
+.bg-bag    { background-color: #f7e8e6; color: #2BAE66FF; }
+.bg-per    { background-color: #FFF2D7; color: #F98866; }
+.bg-nett   { background-color: #C4DFE6; color: #31473A; width: 120px; }
+.bg-opn    { background-color: #9EC8B9; color: #1B4242; width: 120px;}
+
+/*-------------------- pending-badge-------------------*/
+.pending-badge {
+  background-color: #CBC3E3; 
+  color: #800020; 
+  padding: 6px 12px;
+  border: 1px solid #CBC3E3; 
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.pending-badge .clock-icon {
+  color: #333333; 
+  font-size: 1.4em; 
+  animation: spin 1.2s linear infinite;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Spinning animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+/*--------------------Credit Account Button-------------------*/
+.credit-account {
+  background-color: #278701bf; 
+  color: #ffffff; 
+  padding: 6px 12px;
+  border: 1px solid #278701bf; 
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.credit-account .clock-icon {
+  color: #ffffff;
+  font-size: 1.4em;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/*----------------------approved-badge------------------------------*/
+.approved-badge {
+  background-color: #d4edda; 
+  color: #155724;           
+  padding: 6px 12px;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.approved-badge .check-icon {
+  color: #28a745;
+  font-size: 1.2em;
+  animation: bounce 1.2s infinite;
+}
+/*-------------------rejected-badge--------------------------------*/
+.rejected-badge {
+  background-color: #ebc6c9; 
+  color: #721c24;         
+  padding: 6px 12px;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rejected-badge .cross-icon {
+  color: #dc3545; /* red */
+  font-size: 1.2em;
+  animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/*-------------------- returned-button-------------------*/
+.returned-button {
+    background-color: #FFFF8F;
+    color: #212529;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.returned-button:hover {
+    background-color: #FDDA0D;
+}
+.animated-icon {
+    transition: transform 0.4s ease;
+}
+.returned-button:hover .animated-icon {
+    transform: rotate(-360deg);
+}
+.bounce {
+    animation: bounceAnim 0.4s ease;
+}
+@keyframes bounceAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+
+
+.large-input input,
+.large-input textarea,
+.large-input select {
+    min-height: 20px !important;
+}
+
+/* Button Styling */
+.large-input button {
+    height: 50px;
+    background: linear-gradient(135deg, #3ba14f, #3ba14f);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    animation: pulse 2s infinite;
+}
+
+/* Hover Effect */
+.large-input button:hover {
+    background: linear-gradient(135deg, #2e8b47, #2e8b47);
+    box-shadow: 0 6px 14px rgba(0, 73, 153, 0.3);
+    transform: translateY(-4px);
+    animation: bounce 0.5s ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* Subtle Pulsing Effect */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+
+.my-bold-column {
+  font-weight: bold;
+  color: green;
+}
+
+
+.my-cards .t-Report-report {
+  display: flex;
+  flex-wrap: wrap;     /* multiple rows allow karega */
+  gap: 15px;           /* cards ke darmiyan gap */
+  justify-content: flex-start; /* cards left align rahen */
+}
+
+.my-cards .t-Report-report .t-Card {
+  flex: 1 1 calc(25% - 15px);  /* 4 cards per row (25%) */
+  box-sizing: border-box;
+}
+
+
+/* -------------------- HEADER -------------------- */
+.stock-header-pro {
+    position: relative;
+    padding: 18px 26px;
+    border-radius: 14px;
+
+    /* Soft professional gradient */
+    background: linear-gradient(135deg,#0d3f1c,#13894a,#0f5c2d);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+
+    transition: all .35s ease;
+    overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.stock-header-pro:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.25);
+}
+
+/* LEFT SIDE */
+.header-left {
+    display: flex;
+    flex-direction: column;
+}
+
+/* TITLE ROW */
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ICON */
+.header-icon {
+    font-size: 14px;
+}
+
+/* MODULE TEXT */
+.module-name {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #b9e3c8; /* Soft light green */
+    font-weight: 600;
+}
+
+/* TITLE */
+.stock-header-pro h3 {
+    margin: 4px 0 0;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* RIGHT SIDE */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* BADGE */
+.status-badge {
+    font-size: 12px;
+    padding: 6px 16px;
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+
+    backdrop-filter: blur(6px);
+
+    font-weight: 500;
+    letter-spacing: .5px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* SHINE ANIMATION */
+.report-animate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    100% {
+        left: 120%;
+    }
+}
+
+/* BOTTOM LINE */
+.bottom-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+
+    /* Soft gradient for accent */
+    background: linear-gradient(90deg,#52b788,#b8e6c5,#52b788);
+
+    opacity: .85;
+}
